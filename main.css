@@ -12,13 +12,29 @@ box-sizing: border-box;
 }
 
 body {
-    display: block;
-    height: 100vh;
-    background-color: #ffffff;
-    background-image: linear-gradient(315deg, #0de6fb 0%, #779bfd 74%);
+    background: linear-gradient(217deg, #0de6fb, #779bfd);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: AnimationName 21s ease infinite;
+    -moz-animation: AnimationName 21s ease infinite;
+    animation: AnimationName 21s ease infinite;
 }
 
-
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 11%}
+    50%{background-position:100% 90%}
+    100%{background-position:0% 11%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 11%}
+    50%{background-position:100% 90%}
+    100%{background-position:0% 11%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 11%}
+    50%{background-position:100% 90%}
+    100%{background-position:0% 11%}
+}
 
 
 
@@ -86,8 +102,14 @@ height: 350px
     align-items: center;
     position: fixed;
     left: 0;
-    bottom: 15%;
+    bottom: 50px;
     width: 100%;
+    text-align: center;
+    padding: 0px;
+
+
+
+
 
 }
 
@@ -101,18 +123,18 @@ height: 350px
     box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
     background-color: #404040;
     margin: 5px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .social-btn span {
     width: 0px;
     overflow: hidden;
-    transition: 1s;
+    transition: 0.5s;
     text-align: center;
 }
 
 .social-btn:hover {
-    width: 150px;
+    width: 200px;
     border-radius: 5px;
 }
 
@@ -123,3 +145,68 @@ height: 350px
 
 
 
+
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+
+/* Trigger the animation when the page loads */
+body.loaded .fade-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+#countdown {
+display: flex;
+justify-content: center;
+flex-direction: row;
+text-align: center;
+background: clear;
+color: white;
+padding: 5px;
+border-radius: 3px;
+font-family: 'stratum2', sans-serif;
+font-size: 24px;
+}
+.time-unit {
+    margin: 3 10px;
+    text-align: center;
+}
+
+
+.header {
+    padding: -7px;
+    text-align: center;
+    background: #e1c21b;
+    color: black;
+    font-size: 24px;
+}
+
+
+
+@font-face {
+    font-family: 'stratum2';
+    src: url('assets/a.ttf') format('truetype');
+}
+
+.cs2 {
+    font-family: 'stratum2', sans-serif;
+}
+
+
+#image-to-change {
+opacity: 1;
+transition: opacity 0.5s ease-out; /* Smooth fade-in effect */
+
+}
+
+.fade {
+    opacity: 0;
+}

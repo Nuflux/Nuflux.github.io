@@ -6,7 +6,62 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link href="preconnect" src="../assets/a.ttf">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
 </head>
+<script src="fade.js"></script>
+
+
+ <div class="header">
+
+    <div id="countdown">
+    <h3> unbanned in:</h3>
+        <div class="time-unit">
+            <span id="days">0</span> Days
+        </div>
+        <div class="time-unit">
+            <span id="hours">0</span> Hours
+        </div>
+        <div class="time-unit">
+            <span id="minutes">0</span> Minutes
+        </div>
+        <div class="time-unit">
+            <span id="seconds">0</span> Seconds
+        </div>
+    </div>
+</center>
+    <script>
+        function countdown() {
+            const targetDate = new Date('October 1, 2025 00:00:00 PDT').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            if (difference < 0) {
+                clearInterval(timerInterval);
+                document.getElementById("countdown").innerHTML = "Time's up!";
+            }
+        }
+
+        const timerInterval = setInterval(countdown, 1000);
+    </script>
+</div>
+
 
 <body>
 
@@ -14,21 +69,28 @@
 <br>
 <br>
     <center>
-<div>
-<img class="rounded" src="https://pbs.twimg.com/profile_images/1829637340060397571/HE-5ds1s_400x400.jpg" alt="munchy" width="100%" style="max-width: 100%; height: auto;">
+<div class="fade-up">
+<img class="rounded" id="image-to-change" src="https://pbs.twimg.com/profile_images/1829637340060397571/HE-5ds1s_400x400.jpg" alt="munchy" width="100%" style="max-width: 100%; height: auto;" />
+
 <br>
 <h1 class="wave-text" style="color: #ffffff"><span>O</span><span>H</span><span>M</span><span>U</span><span>N</span><span>C</span><span>H</span><span>Y</span>
     </h1>
 <br>
+<div id="clickable-div">
 <h2 class="wave-text" style="color: #adadad"><span>d</span><span>e</span><span>b</span><span>i</span><span>l</span>
+</div>
+<h2 class="Quicksand" style="color: #ff0000">worst streamer on twitch</h2>
 </div>
 
     <br>
 
 
-
+<script src="tf.js"></script>
 
 </center>
+
+<center>
+
 
 
 
@@ -74,13 +136,12 @@
 <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
 	<path d="M 0.219 2.882 l 34.748 46.461 L 0 87.118 h 7.87 l 30.614 -33.073 l 24.735 33.073 H 90 L 53.297 38.043 L 85.844 2.882 h -7.87 L 49.781 33.341 L 27.001 2.882 H 0.219 z M 11.793 8.679 h 12.303 L 78.425 81.32 H 66.122 L 11.793 8.679 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
 </g>
-</svg><span>Munchy
-</span>
+</svg><span>@MunchyGotStolen
 	</div>
 	</a>
 	<a href="https://www.youtube.com/@munchykay417" target="_blank">
 	<div class='social-btn flex-center'>
-			<svg width="24px" height="24px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="red" d="M14.712 4.633a1.754 1.754 0 00-1.234-1.234C12.382 3.11 8 3.11 8 3.11s-4.382 0-5.478.289c-.6.161-1.072.634-1.234 1.234C1 5.728 1 8 1 8s0 2.283.288 3.367c.162.6.635 1.073 1.234 1.234C3.618 12.89 8 12.89 8 12.89s4.382 0 5.478-.289a1.754 1.754 0 001.234-1.234C15 10.272 15 8 15 8s0-2.272-.288-3.367z"/><path fill="#ffffff" d="M6.593 10.11l3.644-2.098-3.644-2.11v4.208z"/></svg><span>Munchy</span>
+			<svg width="24px" height="24px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="red" d="M14.712 4.633a1.754 1.754 0 00-1.234-1.234C12.382 3.11 8 3.11 8 3.11s-4.382 0-5.478.289c-.6.161-1.072.634-1.234 1.234C1 5.728 1 8 1 8s0 2.283.288 3.367c.162.6.635 1.073 1.234 1.234C3.618 12.89 8 12.89 8 12.89s4.382 0 5.478-.289a1.754 1.754 0 001.234-1.234C15 10.272 15 8 15 8s0-2.272-.288-3.367z"/><path fill="#ffffff" d="M6.593 10.11l3.644-2.098-3.644-2.11v4.208z"/></svg><span>@munchykay417</span>
 		</div>
 		</a>
 		<a href="https://www.tiktok.com/@munchycs" target="_blank">
@@ -96,6 +157,13 @@
 		</a>
 </div>
 
+
+
+
+
+
+
+</html>
 
 </center>
 </body>
