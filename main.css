@@ -169,24 +169,25 @@ justify-content: center;
 flex-direction: row;
 text-align: center;
 background: clear;
-color: white;
-padding: 5px;
-border-radius: 3px;
+color: black;
+padding: 0px;
+border-radius: 0px;
 font-family: 'stratum2', sans-serif;
 font-size: 24px;
 }
 .time-unit {
-    margin: 3 10px;
+    margin: 4 10px;
     text-align: center;
+    font-size: 24px;
 }
 
 
 .header {
-    padding: -7px;
+    padding: 0em 0 0em 0;
     text-align: center;
-    background: #e1c21b;
+    background: #e1c212;
     color: black;
-    font-size: 24px;
+    font-size: 0px;
 }
 
 
@@ -194,10 +195,12 @@ font-size: 24px;
 @font-face {
     font-family: 'stratum2';
     src: url('assets/a.ttf') format('truetype');
+    font-optical-sizing: auto;
 }
 
 .cs2 {
     font-family: 'stratum2', sans-serif;
+    color: black;
 }
 
 
